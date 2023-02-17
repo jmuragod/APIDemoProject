@@ -129,3 +129,33 @@ Feature: Test POST APIs
     When I Hit API- with path parameter as "/create"
     Then API returns the response with status code as 400
     And error meassege displayed as "salry can not be a alphanumeric value."
+    
+    @post
+  Scenario Outline: post request to validate with all data
+    Given Go rest API is up and Running
+    And I have <name> <age> and <salary> in payload
+    When I Hit API- with path parameter as "/create"
+    Then API returns the response with status code as 400
+    And error meassege displayed as "salry can not be a alphanumeric value."
+    
+    |name  |age  |salary |
+		|jaya  |  12   |   3455    |
+    |prami|    | 2345 |
+    |tyru|-87|  |
+    |rtey||-6543|
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

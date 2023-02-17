@@ -13,18 +13,20 @@ import io.restassured.specification.RequestSpecification;
 
 public class PutStepDefination {
 	String baseurl="https://dummy.restapiexample.com/api/v1";
-	RequestSpecification req=null;
-	Response res;
-	ValidatableResponse valRes;
+	TestContextAPI testContext;
+	
+	public PutStepDefination(TestContextAPI testContext) {
+		this.testContext = testContext;
+	}
 	
 	/*@Given("Go rest API is up and Running")
 	public void go_rest_API_is_up_and_Running() {
-		req = given().baseUri(baseurl);
+		testContext.req = given().baseUri(baseurl);
 	}*/
 
 	@When("I Hit the api with put request to update the existing user details with path parameter as {string}")
 	public void i_Hit_the_api_with_put_request_to_update_the_existing_user_details_with_path_parameter_as(String uri) {
-		 res=req.when().put(uri); 
+		testContext.res=testContext.req.when().put(uri); 
 	}
 
 	/*@Then("API returns the response with status code as {int}")

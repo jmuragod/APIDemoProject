@@ -12,7 +12,7 @@ glue= {"stepDefinations"},
  
  plugin= {"pretty",
 "html:test-output"},
- dryRun=true
+ dryRun=false
 )
 
 
