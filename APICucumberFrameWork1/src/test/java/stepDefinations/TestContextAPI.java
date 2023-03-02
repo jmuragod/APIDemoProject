@@ -8,4 +8,5 @@ public class TestContextAPI {
 	protected RequestSpecification req=null;
 	protected Response res=null;
 	protected ValidatableResponse valRes=null;
+	
 }

@@ -11,7 +11,7 @@ public class DBManager {
 		String q = " select * from employee ";
 		String [][] result  = FetchDataFromDB(q);
  
-		System.out.print(result);
+		System.out.print(result.toString());
 	}
  
 	public static String[][] FetchDataFromDB(String query) throws SQLException, ClassNotFoundException {
@@ -29,9 +29,6 @@ public class DBManager {
 		rs.last();// this will move the rs to last row
 		int rowcount = rs.getRow(); // this will give the index of last row
 		rs.beforeFirst(); // this will bring it back to first record
-		
-		System.out.println(rowcount);
-		System.out.println(clmCount);
 		
 		//Create a Object 
 		String[][] result = new String[rowcount][clmCount];
