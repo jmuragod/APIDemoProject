@@ -60,8 +60,9 @@ public class DataBaseValidation {
 	        app.connect();      
 	        given()
 	        .when().get("https://gorest.co.in/public-api/users")
+	        
 	        .then()
-	        //.body("data[0].id", equalTo(uid))
+	        .body("data[0].id", equalTo(uid))
 	        .body("data[0].name", equalTo(uname))
 	        .body("data[0].email", equalTo(uemail))
 	        .body("data[0].gender",equalTo(ugender))

@@ -30,9 +30,9 @@ public class MySql {
 			System.out.println(uid+"  "+uname+"  "+uemail+"  "+ugender+"  "+ustatus);
 			
 		}
-		//con.close();
+		con.close();
 		
-		//System.out.println("query executed......");
+		System.out.println("query executed......");
 	}
 }
 

@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(features="classpath:features",
 
 glue= {"stepdefs.api"},
-tags = {"@get"},
+//tags = {"@put"},
 
  plugin= {"pretty",
 "html:test-output"},
